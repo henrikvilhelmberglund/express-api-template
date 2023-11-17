@@ -58,13 +58,11 @@ export const fetchData = async ({
       console.log(result.status);
       return response;
     }
-  } else if (endpoint === `/product/${id}`) {
+  } else if (endpoint === `/products/${id}`) {
     const result = await fetch(url, options);
 
     if (result.status === 200) {
       let data = await result.json();
-      console.info(data);
-      data = data.filter((product) => parseInt(product.id) === parseInt(id));
       if (data.length === 0) {
         response.status = "Error";
         response.data = undefined;

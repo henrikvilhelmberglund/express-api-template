@@ -33,9 +33,9 @@ export const getProduct = async (req, res) => {
   console.error("GET SINGLE PRODUCT");
   const id = req.params.id;
   const response = await httpClient({
-    endpoint: `/product/${id}`,
+    endpoint: `/products/${id}`,
     id,
-    jsonServerEndpoint: "/products",
+    jsonServerEndpoint: `/products/${id}`,
   });
   res.status(response.statusCode).json(response);
 };
