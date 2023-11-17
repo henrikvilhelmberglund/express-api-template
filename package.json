@@ -1,6 +1,6 @@
 {
   "name": "express-api-template",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "server.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "start": "node server.js",
     "dev": "concurrently \"nodemon server\" \"json-server --watch mock.json --port 7777\"",
     "release": "commit-and-tag-version",
-		"postrelase": "git push --follow-tags origin main"
+    "postrelase": "git push --follow-tags origin main"
   },
   "keywords": [],
   "author": "",
